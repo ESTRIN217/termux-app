@@ -63,12 +63,20 @@ android {
             path file('src/main/cpp/Android.mk')
         }
     }
+
+    publishing {
+        multipleVariants {
+            withSourcesJar()
+            withJavadocJar()
+            allVariants()
+        }
+    }
 }
 
 dependencies {
     testImplementation "junit:junit:4.13.2"
     androidTestImplementation "androidx.test.ext:junit:1.1.5"
-    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.2"
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:1.1.5"
 }
 
 task sourceJar(type: Jar) {
@@ -81,7 +89,7 @@ afterEvaluate {
         publications {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
-                from components.findByName('release')
+                from components.default
                 groupId = 'com.termux'
                 artifactId = 'termux-shared'
                 version = '0.118.0'
