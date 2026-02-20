@@ -17,4 +17,12 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <style name="TermuxActivity.Drawer.ButtonBarStyle.Light" parent="android:style/Widget.Material.Light.ButtonBar.AlertDialog">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TermuxActivity.Drawer.ButtonBarStyle.Dark" parent="android:style/Widget.Material.ButtonBar.AlertDialog">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>
