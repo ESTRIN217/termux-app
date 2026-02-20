@@ -42,6 +42,7 @@
 
     <!-- Terminal Sidebar and Shortcuts -->
     <string name="action_new_session">Nueva sesión</string>
+    <string name="new_floating_session">Nueva sesión flotante</string>
     <string name="action_new_session_failsafe">A prueba de fallos</string>
     <string name="title_max_terminals_reached">Se alcanzó el máximo de terminales</string>
     <string name="msg_max_terminals_reached">Cierre las existentes antes de crear nuevas.</string>
@@ -233,5 +234,14 @@
 
     <!-- Donate Preference -->
     <string name="donate_preference_title">Donar</string>
+
+    <string name="float_long_press_instruction">Arrastre para mover, pellizque para cambiar el tamaño</string>
+	<string name="after_long_press">Arrastre para posicionar y pellizque para cambiar el tamaño</string>
+
+    <string name="draw_overlay_permission_explanation">Esta aplicación requiere permiso para dibujar superposiciones.</string>
+    <string name="grant_permission">Conceder permiso</string>
+
+    <string name="notification_message_visible">Toque para ocultar la ventana.</string>
+    <string name="notification_message_hidden">Toque para mostrar la ventana.</string>
 
 </resources>

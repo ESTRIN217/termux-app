@@ -207,6 +207,16 @@
             </intent-filter>
         </service>
 
+        <service
+            android:name=".app.floating.TermuxFloatService"
+            android:exported="false" />
+
+        <activity
+            android:name=".app.floating.TermuxFloatPermissionActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:noHistory="true"
+            android:theme="@style/Theme.AppCompat.Dialog.Alert" />
 
         <!-- This (or rather, value 2.1 or higher) is needed to make the Samsung Galaxy S8 mark the
         app with "This app is optimized to run in full screen." -->

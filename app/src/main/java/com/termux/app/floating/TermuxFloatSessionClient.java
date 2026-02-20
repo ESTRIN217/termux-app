@@ -1,4 +1,4 @@
-package com.termux.app.float;
+package com.termux.app.floating;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.termux.window.TermuxFloatView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.termux.app.floating.TermuxFloatView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/window_layout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/floating_window_background"
     android:orientation="vertical"
-    android:padding="1px" >
+    android:padding="1dp" >
 
     <LinearLayout
         android:id="@+id/window_controls"
@@ -45,4 +45,4 @@
         android:focusableInTouchMode="true"
         android:scrollbars="vertical" />
 
-</com.termux.window.TermuxFloatView>
+</com.termux.app.floating.TermuxFloatView>
