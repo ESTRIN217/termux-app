@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import com.termux.app.R;
+import com.termux.R;
 import com.termux.shared.data.IntentUtils;
 import com.termux.shared.logger.Logger;
 import com.termux.shared.notification.NotificationUtils;

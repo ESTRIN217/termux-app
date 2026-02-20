@@ -8,7 +8,7 @@ import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.text.TextUtils;
 
-import com.termux.app.R;
+import com.termux.R;
 import com.termux.shared.logger.Logger;
 import com.termux.shared.termux.TermuxConstants;
 import com.termux.shared.termux.settings.properties.TermuxPropertyConstants;
