@@ -126,7 +126,7 @@ public class TermuxFloatView extends LinearLayout {
         Logger.logDebug(LOG_TAG, "initFloatView");
 
         // Load termux shared properties
-        mProperties = new TermuxAppSharedProperties(getContext());
+        mProperties = TermuxAppSharedProperties.init(getContext());
 
         // Load termux float shared preferences
         mPreferences = TermuxFloatAppSharedPreferences.build(getContext(), true);
