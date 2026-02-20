@@ -26,7 +26,7 @@ import com.termux.terminal.TerminalSession;
 import com.termux.terminal.TerminalSessionClient;
 import com.termux.view.TerminalView;
 import com.termux.view.TerminalViewClient;
-import com.termux.app.settings.properties.TermuxAppSharedProperties;
+import com.termux.shared.termux.settings.properties.TermuxAppSharedProperties;
 
 public class TermuxFloatView extends LinearLayout {
 
