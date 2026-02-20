@@ -16,7 +16,7 @@
         android:gravity="start|center_vertical"
         android:textSize="14sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
+        android:textColor="?android:attr/textColorPrimary"
         android:visibility="invisible" />
 
     <View
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginHorizontal="@dimen/content_padding"
-        android:background="@android:color/darker_gray"
+        android:background="?android:attr/listDivider"
         android:visibility="invisible" />
 
 
@@ -85,7 +85,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:gravity="end|center_vertical"
             android:textSize="12sp"
-            android:textColor="@android:color/black"
+            android:textColor="?android:attr/textColorPrimary"
             android:visibility="invisible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
