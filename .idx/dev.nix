@@ -1,57 +1,51 @@
-# To learn more about how to use Nix to configure your environment
-# see: https://firebase.google.com/docs/studio/customize-workspace
 { pkgs, ... }: {
-  # Which nixpkgs channel to use.
-  channel = "stable-25.05"; # or "stable-24.05"
+  # Canal de paquetes
+  channel = "stable-24.11";
 
-  # Use https://search.nixos.org/packages to find packages
+  # Herramientas básicas del sistema
   packages = [
-    
+    pkgs.jdk17
+    pkgs.android-tools
+    pkgs.gradle
   ];
 
-  # Sets environment variables in the workspace
-  env = {};
+  # Variables de entorno
+  env = {
+    JAVA_HOME = "${pkgs.jdk17}";
+  };
+
   idx = {
-    # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
+    # Extensiones para tu desarrollo en Kotlin y Java
     extensions = [
-      # "vscodevim.vim"
       "redhat.java"
-      "vscjava.vscode-gradle"
-      "vscjava.vscode-java-debug"
-      "vscjava.vscode-java-dependency"
       "vscjava.vscode-java-pack"
-      "vscjava.vscode-java-test"
-      "vscjava.vscode-maven"
+      "vscjava.vscode-gradle"
+      "fwcd.kotlin"
+      "kotlin_jetbrains.kotlin"
     ];
 
-    # Enable previews
-    previews = {
-      enable = true;
-      previews = {
-        # web = {
-        #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
-        #   # and show it in IDX's web preview panel
-        #   command = ["npm" "run" "dev"];
-        #   manager = "web";
-        #   env = {
-        #     # Environment variables to set for your server
-        #     PORT = "$PORT";
-        #   };
-        # };
+    # Configuración del entorno de trabajo (Mantenlo dentro de idx)
+    workspace = {
+      onCreate = {
+        # Instalamos el NDK exacto que necesitas (29.0.14206865)
+        install-ndk = "yes | sdkmanager --install 'ndk;29.0.14206865'";
+        
+        # Opcional: Aceptar todas las licencias del SDK
+        accept-licenses = "yes | sdkmanager --licenses";
+      };
+      
+      onStart = {
+        # Aquí puedes poner comandos que quieras que corran cada vez que abras el proyecto
       };
     };
 
-    # Workspace lifecycle hooks
-    workspace = {
-      # Runs when a workspace is first created
-      onCreate = {
-        # Example: install JS dependencies from NPM
-        # npm-install = "npm install";
-      };
-      # Runs when the workspace is (re)started
-      onStart = {
-        # Example: start a background task to watch and re-build backend code
-        # watch-backend = "npm run watch-backend";
+    # Panel de previsualización de Android
+    previews = {
+      enable = true;
+      previews = {
+        android = {
+          manager = "android";
+        };
       };
     };
   };
